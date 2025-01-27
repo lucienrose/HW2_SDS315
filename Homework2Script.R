@@ -136,7 +136,7 @@ capmetro_wknd <- capmetro %>%
 
 ggplot(capmetro_wknd, aes(x = temperature, y = boarding, color = weekend))+
   geom_point()+
-  facet_wrap(~hour_of_day)+
+  facet_wrap(~hour_of_day, scales='free')+
   labs(
     x = "Temperature", 
     y = "Boardings", 
@@ -167,7 +167,7 @@ ggplot(billboard_sum, aes(x=year,y=total_unique_songs))+
   geom_line(size=1,col='blue')+
   theme_classic()+
   labs(
-    title='Unique Songs on Billboard Top 100 Cach Year',
+    title='Unique Songs on Billboard Top 100 Each Year',
     x='Year',
     y='Unique Songs')
 
